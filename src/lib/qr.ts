@@ -74,7 +74,8 @@ export async function renderSvg(opts: QrOptions): Promise<string> {
 }
 
 export function dataUrlToBlob(dataUrl: string): Blob {
-  const [head, body] = dataUrl.split(",");
+  const head = dataUrl.split(",")[0] ?? "";
+  const body = dataUrl.split(",")[1] ?? "";
   const mime = /:(.*?);/.exec(head)?.[1] ?? "image/png";
   const bin = atob(body);
   const arr = new Uint8Array(bin.length);
