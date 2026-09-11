@@ -62,26 +62,26 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --radius: 0.75rem;
+  --background: oklch(0.975 0.012 95);
+  --foreground: oklch(0.22 0.02 70);
+  --card: oklch(0.995 0.006 95);
+  --card-foreground: oklch(0.22 0.02 70);
+  --popover: oklch(0.995 0.006 95);
+  --popover-foreground: oklch(0.22 0.02 70);
+  --primary: oklch(0.52 0.13 185);
+  --primary-foreground: oklch(0.99 0.005 95);
+  --secondary: oklch(0.94 0.016 95);
+  --secondary-foreground: oklch(0.25 0.02 70);
+  --muted: oklch(0.94 0.016 95);
+  --muted-foreground: oklch(0.5 0.02 80);
+  --accent: oklch(0.9 0.05 90);
+  --accent-foreground: oklch(0.25 0.02 70);
+  --destructive: oklch(0.577 0.19 30);
+  --destructive-foreground: oklch(0.99 0.005 95);
+  --border: oklch(0.89 0.015 90);
+  --input: oklch(0.89 0.015 90);
+  --ring: oklch(0.52 0.13 185);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -141,4 +141,28 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+@theme inline {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility surface-panel {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 1px 2px oklch(0.22 0.02 70 / 0.05), 0 12px 30px oklch(0.22 0.02 70 / 0.06);
 }
