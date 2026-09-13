@@ -34,7 +34,6 @@ Input validation (warn if text is too long for reliable scanning)
 
 Tech preferences
 
-
 [Specify: React / plain HTML-CSS-JS / etc.]
 
 Use a well-tested QR generation library (e.g., qrcode npm package or qrcode.js)
