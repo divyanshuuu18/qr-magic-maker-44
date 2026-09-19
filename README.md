@@ -42,7 +42,8 @@ No backend required — everything should run client-side
 
 This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://qr-magic-maker-44.lovable.app
+**Live app**: https://qr-magic-maker-44.vercel.app/
+
 
 ## Build with Lovable
 
