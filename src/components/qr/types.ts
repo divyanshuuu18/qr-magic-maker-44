@@ -22,6 +22,8 @@ export interface ImageData {
   previewUrl?: string;
   fileSize?: string;
   isUpload?: boolean;
+  isCloudHosted?: boolean;
+  mode?: "cloud" | "compressed" | "direct";
 }
 
 export interface LocationData {
